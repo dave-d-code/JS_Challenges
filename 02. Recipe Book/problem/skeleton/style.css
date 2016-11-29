@@ -1,0 +1,16 @@
+.uk-grid{
+    width: 90%;
+    margin: 50px auto;
+}
+.uk-accordion-title{
+    width: 100%;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.uk-comment-avatar{
+    width: 50px;
+    height: 50px;
+}

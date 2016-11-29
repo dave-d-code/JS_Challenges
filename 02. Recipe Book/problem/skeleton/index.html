@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Recipe Book</title>
+        <link rel="stylesheet" href="libs/css/uikit.almost-flat.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="libs/css/uikit.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="libs/css/uikit.gradient.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+        <div class="uk-grid">
+            <div class="uk-width-1-2">
+                <form class="uk-form">
+                    <fieldset>
+                        <legend>Add New Recipe</legend>
+                        <div class="uk-form-row">
+                            <input id='name' type="text" class="uk-form-width-large" placeholder="Name">
+                        </div>
+                        <div class="uk-form-row">
+                            <input id='rating' type="number" max='5' min='0' class="uk-form-width-large" placeholder="Rating">
+                        </div>
+                        <div class="uk-form-row">
+                            <input id='image' type="text" class="uk-form-width-large" placeholder="Image">
+                        </div>
+                        <div class="uk-form-row">
+                            <select class="uk-form-width-large" id='category'>
+                                <option value="meat">Meat</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="dessert">Dessert</option>
+                            </select>
+                        </div>
+                        <div class="uk-form-row">
+                            <button id='add_book' class="uk-button uk-button-primary" name="button">Add</button>
+                            <button id='clear_book' class="uk-button uk-button-danger" name="button">Clear</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="uk-width-1-2">
+                <div class="uk-accordion" data-uk-accordion>
+
+                    <h3 class="uk-accordion-title">Meat</h3>
+                    <div class="uk-accordion-content" id='meat_recipes'></div>
+
+                    <h3 class="uk-accordion-title">Vegan</h3>
+                    <div class="uk-accordion-content" id='vegan_recipes'></div>
+
+                    <h3 class="uk-accordion-title">Dessert</h3>
+                    <div class="uk-accordion-content" id='dessert_recipes'></div>
+
+                </div>
+            </div>
+        </div>
+
+        <script id="recipe-trmplate" type="text/x-handlebars-template">
+          {{#each meat}}
+            <article class="uk-comment">
+                <header class="uk-comment-header">
+                    <img class="uk-comment-avatar" src="{{_image}}" alt="">
+                    <h4 class="uk-comment-title">{{_name}}</h4>
+                    <div class="uk-comment-meta">
+                        <div class="uk-badge uk-badge-success">{{_rating}}</div>
+                        <button data-id='{{_id}}' class="remove">Remove</button>
+                    </div>
+                </header>
+            </article>
+          {{/each}}
+        </script>
+    </body>
+    <script src="libs/lodash.core.min.js" charset="utf-8"></script>
+    <script src="libs/underscore-observe.js" charset="utf-8"></script>
+    <script src="libs/handlebars-v4.0.5.js" charset="utf-8"></script>
+    <script src="libs/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script src="libs/js/uikit.min.js" charset="utf-8"></script>
+    <script src="libs/js/components/accordion.min.js" charset="utf-8"></script>
+    <script src="extentions/extentions.js" charset="utf-8"></script>
+    <script src="models/recipe.js" charset="utf-8"></script>
+    <script src="models/book.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+</html>

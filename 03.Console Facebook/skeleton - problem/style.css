@@ -1,0 +1,55 @@
+body{
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+}
+body header h4{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px 0;
+    background-color: blue;
+    color: white;
+}
+body main{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+body main section{
+    min-width: 200px;
+    max-width: 200px;
+    width: 200px;
+    min-height: calc(100vh - 58px);
+    max-height: calc(100vh - 58px);
+    height: calc(100vh - 58px);
+}
+body main section h5{
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    background-color: orange;
+    color: white;
+}
+body main section ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    min-width: 200px;
+    max-width: 200px;
+    width: 200px;
+    min-height: calc(100vh - 93px);
+    max-height: calc(100vh - 93px);
+    height: calc(100vh - 93px);
+    overflow-y: scroll;
+    background-color: silver;
+}
+body main ul li{
+    margin: 10px 0;
+    height: 60px;
+    background-color: red;
+    padding: 10px;
+}
+.sortable-form{
+    margin: 10px;
+}
