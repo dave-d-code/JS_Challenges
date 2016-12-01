@@ -2,16 +2,26 @@ var app = app || {};
 
 (function(kanbanApp) {
     //TODO: #1 MAKE ALL UL’s SORTABLE
-    console.log("MAKE ALL UL’s SORTABLE");
+    //console.log("MAKE ALL UL’s SORTABLE");
+    $(function() {
+        $(".sortable").sortable({ 
+            
+        });
+    });
 
-    var kanban = new kanbanApp.kanban();
+
+
+    var kanban = new app.kanbanApp.kanban();
 
 
     $('#add').click(function(ev) {
         ev.preventDefault();
-        //TODO: #2 CREATE CARD USING FORM, ADD DATA TO KANBAN CARDS COLLECTION
-        console.log('CREATE CARD USING FORM, ADD DATA TO KANBAN CARDS COLLECTION');
 
+        card1 = new card();
+        card1.setName($('#name').val());       
+        card1.setColumn($('#column').val());
+        
+        kanban.addCard(card1);
         observeChanges();
     });
 
@@ -22,12 +32,12 @@ var app = app || {};
         var col2 = $('#2');
         var col3 = $('#3');
         var col4 = $('#4');
-        cards.forEach(function(c) {
-            var isExist = ids.filter(function(id) {
+        cards.forEach(function(c) {       
+            var isExist = ids.filter(function(id) {            
                 return id === c.getId();
             });
             if (isExist.length<=0) {
-                switch (c.getColumn()) {
+                switch (c.getColumn()) { 
                     case 1:
                         col1.append('<li>'+c.getName()+'</li>');
                     break;
@@ -43,6 +53,6 @@ var app = app || {};
                 }
                 ids.push(c.getId());
             }
-        });
-    }
+        }); // end of Foreach loop.
+    } // end of fn observeChanges
 }(app));
