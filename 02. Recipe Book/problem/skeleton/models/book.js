@@ -13,8 +13,7 @@ app.recipeBook.book.prototype = {
 		this._recipes.push(reciepe);
 	},
 	removeRecipe : function removeRecipe(id) {
-		//return _.reject(this._recipes, ['id': id]); // check that this has altered the class property
-		return null;
+		return this._recipes.splice(id, 1);
 	},
 	getRecipes : function getRecipes() {
 		return this._recipes;
