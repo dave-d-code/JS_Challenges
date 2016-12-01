@@ -4,9 +4,10 @@ var app = app || {};
     //TODO: #1 MAKE ALL UL’s SORTABLE
     //console.log("MAKE ALL UL’s SORTABLE");
     $(function() {
-        $(".sortable").sortable({ 
-            
-        });
+        
+        $('.sortable').sortable({
+            connectWith: '.sortable'
+        }).disableSelection();
     });
 
 
