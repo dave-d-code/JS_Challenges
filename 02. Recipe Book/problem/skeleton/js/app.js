@@ -4,13 +4,7 @@ var app = app || {};
    
    
    var book = new app.recipeBook.book(); // sort this out..
-    
-   
-   console.log(book);
-
-   //console.log(book.getRecipes());
-
-  
+      
 
     $('#add_book').click(function(ev) {
         ev.preventDefault();
@@ -29,12 +23,12 @@ var app = app || {};
     $("#clear_book").click(function(ev) {
         ev.preventDefault();
 		$("form").trigger('reset');
-        console.log('clears recipe form');
+        
     });
 
     $(document).on('click','.remove',function(ev){
         //TODO: remove target recipe by Id
-        var id = $(this).data('id');
+        var id = $(this).data('id'); // this doesnt work.. use lodash
         book.removeRecipe(id);
        loadData();
     });
@@ -63,6 +57,7 @@ var app = app || {};
         var html    = template(contextMeat);
         var html2    = template(contextvegan);
         var html3    = template(contextdessert);
+        
 
         $('#meat_recipes').html(html);
         $('#vegan_recipes').html(html2);
