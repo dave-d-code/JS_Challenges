@@ -1,9 +1,12 @@
 var app = app || {};
 
 (function(recipeBook) {
-   // var book = new recipeBook.book();
-   var book1 = new book();
+   
+   //console.log(recipeBook);
+   var book1 = new app.recipeBook.book();
    console.log(book1);
+
+  
 
     $('#add_book').click(function(ev) {
         //TODO: add new recipe to book

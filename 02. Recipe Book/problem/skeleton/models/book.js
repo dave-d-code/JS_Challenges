@@ -1,29 +1,23 @@
-
+var app = app || {};
+app.recipeBook = app.recipeBook || {};
 
 // lets create the class and see what happens,....
 
-function book() {
-	
-	this._recipes = [];
-	
+app.recipeBook.book = function app_recipeBook_book() {};
 
-	// method for adding reciepe
-	this.addRecipes = function addRecipes(reciepe) {
+
+app.recipeBook.book.prototype = {
+
+	_recipes: [],
+	addRecipes : function addRecipes(reciepe) {
 		this._recipes.push(reciepe);
-	}
-
-	// method for deleting reciepe based on reciepe.id
-
-	this.removeRecipe = function removeRecipe(id) {
+	},
+	removeRecipe : function removeRecipe(id) {
 		//return _.reject(this._recipes, ['id': id]); // check that this has altered the class property
 		return null;
-	}
-
-	// getter method for giving out the receipes
-
-	this.getRecipes = function getRecipes() {
+	},
+	getRecipes : function getRecipes() {
 		return this._recipes;
 	}
-	
+};
 
-} // end of class/constructor book
