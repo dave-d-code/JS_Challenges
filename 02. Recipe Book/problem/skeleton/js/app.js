@@ -3,8 +3,10 @@ var app = app || {};
 (function(recipeBook) {
    
    //console.log(recipeBook);
-   var book1 = new app.recipeBook.book();
-   console.log(book1);
+   var book1 = new app.recipeBook.book(); // sort this out..
+   book1.addRecipes("test");
+
+   console.log(book1.getRecipes());
 
   
 
