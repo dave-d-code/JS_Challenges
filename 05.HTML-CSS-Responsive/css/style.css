@@ -1,0 +1,20 @@
+/* basic styles to add to UI kit to minic website */
+
+.tabs {
+	background-color: #C2CFE2;
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+	border: 2px solid #FFF;
+	border-radius: 1.5em 0px 1.5em 0px;
+}
+
+/*#intro {
+	background-image: url(http://placehold.it/960x466);
+	background-repeat: no-repeat;
+}*/
+
+#intro {
+	margin-bottom: 30px;
+}
+
