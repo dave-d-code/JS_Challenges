@@ -1,8 +1,8 @@
 var app = app || {};
 app.kanbanApp = app.kanbanApp || {};
 
-/* comment code block to go here
-*
+/* creates kanban object, which recieves array of card objects
+* @class
 *
 */
 

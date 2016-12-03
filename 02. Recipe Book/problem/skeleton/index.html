@@ -36,12 +36,13 @@
                         </div>
                     </fieldset>
                 </form>
-                <!-- just in case -->
+                <!-- extra layout to show top 3 rated recipes -->
                 <div class="uk-margin-top">
                     <h3>Top 3 All Time Rated Recipes</h3>
                     <hr>
                 </div>
                 <div id="rating-results"></div>
+                <!-- end of extra layout -->
             </div>
             <div class="uk-width-1-2">
                 <div class="uk-accordion" data-uk-accordion>
@@ -74,7 +75,7 @@
           {{/each}}
         </script>
 
-    <!-- my own script to get handlebars rolling -->
+    <!-- my own script to show quick handlebars template -->
     <script id="rating-template" type="text/x-handlebars-template">
     {{#each rating}}
         <div class="uk-panel uk-panel-box-primary uk-margin-top">

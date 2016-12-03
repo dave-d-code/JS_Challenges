@@ -65,17 +65,22 @@ var app = app || {};
         ratingData(); // calling ratingData() from here isnt the best design practice, done for quick demo.
     }
 
-    // extra function to show top 3 rated reciepes and place into new template
+    
+    /* extra function to show top 3 rated recipes and place into new template
+    * @returns {html} HTML into Handlebars template #rating-template
+    */
 
     function ratingData () {
         var array1 = $.extend(true, [], book.getRecipes());
         array1.sort(function(a, b){ return a._rating < b._rating;});
 
-        for (var i = 0; i < array1.length; i++) { // add a new 'position' property for ranking
+        // add a new 'position' property for to each object in the array
+        for (var i = 0; i < array1.length; i++) { 
             array1[i]['position'] = i + 1;
         };
 
-        if (array1.length > 3) { // show top 3 only to send to template
+        // show top 3 only to send to template
+        if (array1.length > 3) { 
             array1 = array1.slice(0, 3);
         }
 

@@ -1,5 +1,6 @@
-/* basic styles to add to UI kit to minic website */
+/* extra basic styles to add to UIkit styles to minic example website */
 
+/* top navigation menu aka tabs */
 .tabs {
 	background-color: #C2CFE2;
 	padding: 0.5em;
@@ -9,6 +10,7 @@
 	border-radius: 1.5em 0px 1.5em 0px;
 }
 
+/* main intro banner */
 #intro {
 	margin-top: 2px;
 	margin-bottom: 30px;
@@ -21,6 +23,8 @@
 	text-shadow: 2px 2px 2px #000;
 	font-style: italic;
 }
+
+/* footer styles */
 
 #footerblock {
 	background-color: #00a8e6;

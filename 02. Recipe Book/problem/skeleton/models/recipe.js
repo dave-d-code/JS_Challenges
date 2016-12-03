@@ -1,6 +1,7 @@
-//  class for the receipe section
-
-
+/*
+* Creates a new recipe object
+* @Class
+*/
 
 var recipe = (function() {
 

@@ -4,13 +4,13 @@ var app = app || {};
     //TODO: #1 MAKE ALL UL’s SORTABLE
     //console.log("MAKE ALL UL’s SORTABLE");
     $(function() {
+
+        // jqueryUI. Cards are now sortable across columns, and up and down.
         
         $('.sortable').sortable({
             connectWith: '.sortable'
         }).disableSelection();
     });
-
-
 
     var kanban = new app.kanbanApp.kanban();
 

@@ -1,4 +1,6 @@
-// constructor for the cards
+/* Creates new card objects
+* @class
+*/
 
 
 var card = (function() {

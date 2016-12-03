@@ -1,8 +1,8 @@
 var app = app || {};
 app.recipeBook = app.recipeBook || {};  // singleton method to solve namespace issue?
 
-/* book constructor
-*
+/* Creates new book object which holds an array of recipe objects
+* @Class
 *
 */
 
