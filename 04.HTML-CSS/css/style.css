@@ -19,15 +19,16 @@ body {
 	background-color: #f4f2e8;
 }
 
-/* bg-banner created using MS paint*/
+/* bg-banner created using MS paint.*/
 header {
 	padding-top: 40px;
 	margin-bottom: -18px;
 	background-image: url(../images/bg-banner.jpg);
 	background-repeat: repeat-x;
-
+	padding-bottom: 20px;
 }
 
+/* main banner section */
 #mainlogo {
 	margin-top: -10px;
 }
@@ -42,25 +43,10 @@ header {
 	margin-left: 10px;
 	font-size: 30px;
 	color: #e4dfdf;
+	padding-bottom: 20px;
 }
 
-
-#subtitle h4 {
-	font-size: 25px;
-	color: #e4dfdf;
-}
-
-#subtitle {
-
-	padding-left: 120px;
-	padding-top: 20px;
-}
-
-.cleartag {
-	clear: both;
-}
-
-/* nav styles*/
+/* navigation menu styles */
 nav ul {
 	list-style: none;
 	overflow: hidden;
@@ -71,18 +57,20 @@ nav li {
 	float: left;
 }
 
-/* review padding*/
+
 nav li a {
 	display: block;
 	color: #595a5b;
 	text-align: center;
 	padding: 20px 20px;
 	padding-left: 30px;
-	padding-right: 70px;
-	font-size: 20px;
+	padding-right: 110px;
+	font-size: 25px;
+	font-weight: bold;
 	text-decoration: none;
 }
 
+/* main article styles */
 main {
 	padding-left: 20px;
 	color: #455054;
@@ -95,7 +83,7 @@ main h2 {
 	color: #1d728c;
 	padding-top: 30px;
 }
-/*ck */
+
 main h3 {
 	padding-top: 25px;
 	padding-bottom: 25px;
@@ -115,6 +103,12 @@ main a {
 	font-weight: bold;
 }
 
+
+.cleartag {
+	clear: both;
+}
+
+/* side navigation menu */
 aside {
 	width: 200px;
 	float: left;
@@ -148,6 +142,7 @@ aside img {
 	width: 25px;
 }
 
+/* green submit button on side menu*/
 #submit {
 	color: #424344;
 	text-decoration: none;
@@ -156,4 +151,11 @@ aside img {
 	padding: 5px;
 	font-size: 20px;
 	margin-bottom: 20px;
+}
+
+/* footer styles */
+.innerbody #footnote  {
+	background-color: #393d3f;
+	color: #fff;
+	padding: 20px 20px 20px 50px;
 }
