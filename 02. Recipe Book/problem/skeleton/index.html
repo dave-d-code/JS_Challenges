@@ -36,6 +36,12 @@
                         </div>
                     </fieldset>
                 </form>
+                <!-- just in case -->
+                <div class="uk-margin-top">
+                    <h3>Top 3 All Time Rated Recipes</h3>
+                    <hr>
+                </div>
+                <div id="rating-results"></div>
             </div>
             <div class="uk-width-1-2">
                 <div class="uk-accordion" data-uk-accordion>
@@ -67,6 +73,18 @@
             </article>
           {{/each}}
         </script>
+
+    <!-- my own script to get handlebars rolling -->
+    <script id="rating-template" type="text/x-handlebars-template">
+    {{#each rating}}
+        <div class="uk-panel uk-panel-box-primary uk-margin-top">
+            <div class="uk-panel-badge uk-badge">{{position}}</div>
+            <h3 class="uk-panel-title">{{_name}}</h3>
+            <p>Rated: {{_rating}}</p>
+        </div>
+    {{/each}}
+    </script>
+
     </body>
     <script src="libs/lodash.core.min.js" charset="utf-8"></script>
     <script src="libs/underscore-observe.js" charset="utf-8"></script>

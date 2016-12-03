@@ -7,7 +7,7 @@ var recipe = (function() {
 	var newId = 0;
 
 	return function () {
-		this._id = newId++; // maybe these arent hidden?
+		this._id = newId++; 
 		this._name = "";
 		this._rating = "";
 		this._image = "";

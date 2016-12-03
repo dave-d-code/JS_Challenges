@@ -1,5 +1,5 @@
 var app = app || {};
-app.recipeBook = app.recipeBook || {};
+app.recipeBook = app.recipeBook || {};  // singleton method to solve namespace issue?
 
 /* book constructor
 *

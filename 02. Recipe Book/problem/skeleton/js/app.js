@@ -3,7 +3,7 @@ var app = app || {};
 (function(recipeBook) {
    
    
-   var book = new app.recipeBook.book(); // sort this out..
+   var book = new app.recipeBook.book(); 
       
 
     $('#add_book').click(function(ev) {
@@ -27,8 +27,7 @@ var app = app || {};
     });
 
     $(document).on('click','.remove',function(ev){
-        //TODO: remove target recipe by Id
-        var id = $(this).data('id'); // this doesnt work.. use lodash
+        var id = $(this).data('id'); 
         book.removeRecipe(id);
        loadData();
     });
@@ -62,6 +61,29 @@ var app = app || {};
         $('#meat_recipes').html(html);
         $('#vegan_recipes').html(html2);
         $('#dessert_recipes').html(html3);
+
+        ratingData(); // calling ratingData() from here isnt the best design practice, done for quick demo.
+    }
+
+    // extra function to show top 3 rated reciepes and place into new template
+
+    function ratingData () {
+        var array1 = $.extend(true, [], book.getRecipes());
+        array1.sort(function(a, b){ return a._rating < b._rating;});
+
+        for (var i = 0; i < array1.length; i++) { // add a new 'position' property for ranking
+            array1[i]['position'] = i + 1;
+        };
+
+        if (array1.length > 3) { // show top 3 only to send to template
+            array1 = array1.slice(0, 3);
+        }
+
+        var template = Handlebars.compile($('#rating-template').html());
+        var html = template({rating:array1});
+
+        $('#rating-results').empty().html(html);
+
     }
 
 }(app));

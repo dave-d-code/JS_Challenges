@@ -1,5 +1,5 @@
 
-// Coins array placed here to test code. added negative coins to cover all tests.
+// Coins array placed here to test code. added negative coins in array 3 to cover all tests.
 
 var array1 = ['coin 1','coin 2', 'coin 5', 'coin 10', 'coin 20', 'coin 50', 'coin 100', 'coin 200', 'coin 500','cigars 1'];
 var array2 = ['coin one', 'coin two', 'coin five', 'coin ten', 'coin twenty', 'coin fifty', 'coin hundred', 'cigars 1'];
@@ -61,4 +61,6 @@ function filterArray(element) {
 	
 }
 
+countCoins(array1);
+countCoins(array2);
 countCoins(array3);
